@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+	<data>
+		<variable
+				name="item"
+				type="com.rizkyfadilah.sehatq.domain.model.Category"/>
+
+	</data>
+	<FrameLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:padding="15dp"
+			android:layout_margin="10dp">
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="80dp"
+				android:adjustViewBounds="true"
+				app:image_url="@{item.imageUrl}"
+				android:src="@drawable/ico_lovelist_outline"/>
+	</FrameLayout>
+</layout>
