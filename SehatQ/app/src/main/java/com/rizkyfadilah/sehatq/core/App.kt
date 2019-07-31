@@ -3,6 +3,7 @@ package com.rizkyfadilah.sehatq.core
 
 import android.content.Context
 import androidx.multidex.MultiDex
+import com.facebook.FacebookSdk
 import com.rizkyfadilah.sehatq.di.component.DaggerCoreComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
@@ -17,6 +18,7 @@ class App : DaggerApplication() {
 
     override fun onCreate() {
         super.onCreate()
+
 
     }
     override fun attachBaseContext(base: Context?) {
