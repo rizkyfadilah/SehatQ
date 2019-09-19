@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter
+import com.mikepenz.fastadapter.adapters.FastItemAdapter
 import com.rizkyfadilah.sehatq.R
 import com.rizkyfadilah.sehatq.domain.model.Product
 import com.rizkyfadilah.sehatq.ui.common.UnspecifiedTypeItem

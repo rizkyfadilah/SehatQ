@@ -1,6 +1,6 @@
 package com.rizkyfadilah.sehatq.ui.common
 
-import com.mikepenz.fastadapter.commons.utils.DiffCallbackImpl
+import com.mikepenz.fastadapter.diff.DiffCallback
 
 /**
  * asia.digiasia.kaspro.common.extension
@@ -12,7 +12,7 @@ interface DiffableListItemType {
     fun comparableContents(): List<Any>
 }
 
-class DiffableCallback<Item : UnspecifiedTypeItem> : DiffCallbackImpl<Item>() {
+class DiffableCallback<Item : UnspecifiedTypeItem> : DiffCallback<Item> {
 
     override fun areItemsTheSame(oldItem: Item, newItem: Item): Boolean {
         if (oldItem is DiffableListItemType && newItem is DiffableListItemType) {

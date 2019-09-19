@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.rizkyfadilah.sehatq"
         minSdkVersion 17
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -27,6 +27,10 @@ android {
     compileOptions {
         targetCompatibility 1.8
         sourceCompatibility 1.8
+    }
+
+    lintOptions {
+        abortOnError false
     }
 }
 
@@ -51,8 +55,9 @@ dependencies {
     implementation "com.facebook.android:facebook-login:4.35.0"
     implementation "com.google.android.gms:play-services-auth:17.0.0"
 
-    implementation "com.mikepenz:fastadapter-commons:3.2.9@aar"
-    implementation "com.mikepenz:fastadapter:3.2.9@aar"
+    implementation "com.mikepenz:fastadapter:4.0.1"
+    implementation "com.mikepenz:fastadapter-extensions-diff:4.0.1"
+    implementation "com.mikepenz:fastadapter-extensions-utils:4.0.1"
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0-alpha02'
     kapt 'androidx.lifecycle:lifecycle-compiler:2.2.0-alpha02'

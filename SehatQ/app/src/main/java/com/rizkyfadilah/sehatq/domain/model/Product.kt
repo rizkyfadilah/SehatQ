@@ -24,10 +24,10 @@ data class Product(
 
     constructor(source: Parcel) : this(
         source.readInt(),
-        source.readString(),
-        source.readString(),
-        source.readString(),
-        source.readString(),
+        source.readString().orEmpty(),
+        source.readString().orEmpty(),
+        source.readString().orEmpty(),
+        source.readString().orEmpty(),
         source.readInt()
     )
 

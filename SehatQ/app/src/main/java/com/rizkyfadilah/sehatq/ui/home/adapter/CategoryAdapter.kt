@@ -16,13 +16,15 @@ data class CategoryAdapter(
     val viewModel: Category,
     val listener: EventListener
 ) :
-    AbstractItem<CategoryAdapter, CategoryAdapter.ViewHolder>() {
+    AbstractItem<CategoryAdapter.ViewHolder>() {
 
-    override fun getType(): Int = hashCode()
+    override val layoutRes: Int
+        get() = R.layout.category_item_row
+
+    override val type: Int
+        get() = hashCode()
 
     override fun getViewHolder(v: View): ViewHolder = ViewHolder(v)
-
-    override fun getLayoutRes(): Int = R.layout.category_item_row
 
     override fun bindView(holder: ViewHolder, payloads: MutableList<Any>) {
         super.bindView(holder, payloads)

@@ -15,14 +15,16 @@ import com.rizkyfadilah.sehatq.ui.common.BindableListItemViewHolder
 data class OrderAdapter(
     val viewModel: Product
 ) :
-    AbstractItem<OrderAdapter, OrderAdapter.ViewHolder>() {
+    AbstractItem<OrderAdapter.ViewHolder>() {
 
-    override fun getType(): Int = hashCode()
+    override val type: Int
+        get() = hashCode()
+
+    override val layoutRes: Int
+        get() = R.layout.order_item_row
 
     override fun getViewHolder(v: View): ViewHolder =
         ViewHolder(v)
-
-    override fun getLayoutRes(): Int = R.layout.order_item_row
 
     override fun bindView(holder: ViewHolder, payloads: MutableList<Any>) {
         super.bindView(holder, payloads)

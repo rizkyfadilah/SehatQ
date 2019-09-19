@@ -20,8 +20,8 @@ data class Category(
 ) : Parcelable {
     constructor(source: Parcel) : this(
         source.readInt(),
-        source.readString(),
-        source.readString()
+        source.readString().orEmpty(),
+        source.readString().orEmpty()
     )
 
     override fun describeContents() = 0

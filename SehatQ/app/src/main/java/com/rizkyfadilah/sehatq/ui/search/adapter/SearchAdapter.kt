@@ -18,13 +18,15 @@ data class SearchAdapter(
     val viewModel: Product,
     val listener: ProductAdapter.EventListener
 ) :
-    AbstractItem<SearchAdapter, SearchAdapter.ViewHolder>() {
+    AbstractItem<SearchAdapter.ViewHolder>() {
 
-    override fun getType(): Int = hashCode()
+    override val type: Int
+        get() = hashCode()
+
+    override val layoutRes: Int
+        get() = R.layout.search_item_row
 
     override fun getViewHolder(v: View): ViewHolder = ViewHolder(v)
-
-    override fun getLayoutRes(): Int = R.layout.search_item_row
 
     override fun bindView(holder: ViewHolder, payloads: MutableList<Any>) {
         super.bindView(holder, payloads)

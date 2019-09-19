@@ -16,13 +16,15 @@ data class ProductAdapter(
     val viewModel: Product,
     val listener: EventListener
 ) :
-    AbstractItem<ProductAdapter, ProductAdapter.ViewHolder>() {
+    AbstractItem<ProductAdapter.ViewHolder>() {
 
-    override fun getType(): Int = hashCode()
+    override val type: Int
+        get() = hashCode()
+
+    override val layoutRes: Int
+        get() = R.layout.product_item_row
 
     override fun getViewHolder(v: View): ViewHolder = ViewHolder(v)
-
-    override fun getLayoutRes(): Int = R.layout.product_item_row
 
     override fun bindView(holder: ViewHolder, payloads: MutableList<Any>) {
         super.bindView(holder, payloads)
