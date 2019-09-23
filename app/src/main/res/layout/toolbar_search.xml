@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/toolbar_main_activity"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimary"
+		android:elevation="6dp"
+		android:minHeight="?attr/actionBarSize"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="35dp"
+			android:background="@drawable/rounded_white"
+			android:layout_marginStart="30dp"
+			android:layout_marginEnd="30dp"
+			android:paddingStart="20dp"
+			android:paddingEnd="20dp"
+			android:orientation="horizontal">
+
+		<ImageView
+				android:layout_width="20dp"
+				android:layout_height="match_parent"
+				android:adjustViewBounds="true"
+				android:layout_gravity="start"
+				android:src="@drawable/bar_search"/>
+		<EditText
+				android:background="@color/white"
+				android:id="@+id/search"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:hint="@string/app_name"
+				android:layout_marginStart="10dp"
+				android:maxLines="1"
+				android:fontFamily="@font/roboto_light"
+				android:textColor="@color/colorPrimaryDark"
+				android:layout_gravity="center"/>
+	</LinearLayout>
+
+
+</androidx.appcompat.widget.Toolbar>
